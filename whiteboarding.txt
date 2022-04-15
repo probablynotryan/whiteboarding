@@ -41,11 +41,30 @@ const compressStr = (str) => {
 Q4: Write an algorithm that determines whether all the elements in a string are unique. You may not convert the string into an array or use array methods to solve this problem. The algorithm should return a boolean.
 
 const beUnique = (str) => {
+  let x = "";
   while (str.length != 0) {
-   if (str.split(str[0]).length - 1 > 1){
-     return false;
-   }
+    x = str[0];
     str = str.substring(1);
+    if (str.includes(x)) {
+      return false
+    }
   }
   return true;
 }
+
+Q5: Write an algorithm that sorts an array without using the sort() method. 
+
+
+const sortIt = (arr) => {
+  let place = "";
+  for (let i = 0; i < arr.length; i++){
+    for (let j = 0; j < arr.length - i - 1); j++){
+      if (arr[j] > arr[j+1]){
+        place = arr[j];
+        arr[j] = arr[j+1];
+        arr[j+1] = place;
+      }
+    }
+  }
+}
+
