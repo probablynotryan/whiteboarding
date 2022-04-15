@@ -58,7 +58,7 @@ Q5: Write an algorithm that sorts an array without using the sort() method.
 const sortIt = (arr) => {
   let place = "";
   for (let i = 0; i < arr.length; i++){
-    for (let j = 0; j < arr.length - i - 1); j++){
+    for (let j = 0; j < arr.length - i - 1; j++){
       if (arr[j] > arr[j+1]){
         place = arr[j];
         arr[j] = arr[j+1];
@@ -66,5 +66,6 @@ const sortIt = (arr) => {
       }
     }
   }
+  return arr;
 }
 
