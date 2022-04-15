@@ -37,6 +37,20 @@ const compressStr = (str) => {
   return o;
 }
     
+const compressStr = (str) => {
+  let o = "";
+  let i = 1;
+  while (str.length > 0){
+    if (str[0] == str[1]){
+      i++;
+    } else {
+      o = o.concat(i + str[0])
+      i = 1;
+    }
+    str = str.substring(1);
+  }
+  return o.replaceAll(1,"");
+}
 
 Q4: Write an algorithm that determines whether all the elements in a string are unique. You may not convert the string into an array or use array methods to solve this problem. The algorithm should return a boolean.
 
