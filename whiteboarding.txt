@@ -2,3 +2,18 @@ Q1: URLs cannot have spaces. Instead, all spaces in a string are replaced with %
 
 You may not use the replace() method or regular expressions to solve this problem. Solve the problem with and without recursion.
 
+const replaceSpaces = (str) => {
+  let o = "";
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === " ") {
+      o += "%20";
+    } else {
+      o += str[i];
+    }
+  }
+  return o;
+}
+
+
+Q2: Write an algorithm that removes duplicates from an array. Do not use a function like filter() to solve this. Once you have solved the problem, demonstrate how it can be solved with filter(). Solve the problem with and without recursion.
+
