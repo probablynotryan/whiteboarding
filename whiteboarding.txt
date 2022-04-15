@@ -4,13 +4,8 @@ You may not use the replace() method or regular expressions to solve this proble
 
 const replaceSpaces = (str) => {
   let o = "";
-  for (let i = 0; i < str.length; i++) {
-    if (str[i] === " ") {
-      o += "%20";
-    } else {
-      o += str[i];
-    }
-  }
+  for (let i = 0; i < str.length; i++)
+    o = o.concat((str[i] === " ") ? "%20" : str[i])
   return o;
 }
 
@@ -20,9 +15,18 @@ Q2: Write an algorithm that removes duplicates from an array. Do not use a funct
 const dedupeArr = (arr) => {
   let o = [];
   for (let i = 0; i < arr.length; i++){
-    if (!o.includes(arr[i])) {
-      o.push(arr[i]);
-    }
+    (!o.includes(arr[i])) && o.push(arr[i])
   }
   return o;
 }
+
+const filterArr = (arr) => arr.filter((element, index, array) => !array.splice(0,index).includes(element));
+
+
+
+Q3: Write an algorithm that takes a string with repeated characters and compresses them, using a number to show how many times the repeated character has been compressed. For instance, aaa would be written as 3a. Solve the problem with and without recursion.
+
+cont compressStr = (str) => {
+
+  }
+    
