@@ -17,3 +17,12 @@ const replaceSpaces = (str) => {
 
 Q2: Write an algorithm that removes duplicates from an array. Do not use a function like filter() to solve this. Once you have solved the problem, demonstrate how it can be solved with filter(). Solve the problem with and without recursion.
 
+const dedupeArr = (arr) => {
+  let o = [];
+  for (let i = 0; i < arr.length; i++){
+    if (!o.includes(arr[i])) {
+      o.push(arr[i]);
+    }
+  }
+  return o;
+}
