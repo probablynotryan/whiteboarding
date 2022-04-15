@@ -26,7 +26,14 @@ const filterArr = (arr) => arr.filter((element, index, array) => !array.splice(0
 
 Q3: Write an algorithm that takes a string with repeated characters and compresses them, using a number to show how many times the repeated character has been compressed. For instance, aaa would be written as 3a. Solve the problem with and without recursion.
 
-cont compressStr = (str) => {
-
+const compressStr = (str) => {
+  let o = "";
+  while (str.length != 0) {
+    if (!o.includes(str[0])){
+    o = o.concat(str.split(str[0]).length - 1) + str[0];
+    }
+    str = str.substring(1);
   }
+  return o;
+}
     
